@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <meta charset="utf-8">
+  <title>SG Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+  <script type="text/javascript" src="lib/sparkview/gateway.js"></script>
+  <script type="text/javascript" src="js/report.js"></script>
+  <link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css" media="screen">
+</head>
+<body>
+	<div ng-controller="ReportCtrl">
+		<a href="" ng-click="getReport()">Test</a>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>Start Time</th>
+					<th>Server</th>
+					<th>Client IP</th>
+					<th>User Agent</th>
+				</tr>
+			</thead>
+			<tr ng-repeat="connection in connections">
+				<td>{{ connection.startTime }}</td>
+				<td>{{ connection.server }}</td>
+				<td>{{ connection.clientIp }}</td>
+				<td>{{ connection.clientAgent }}</td>
+			</li>
+		</ul>
+		
+	</div>
+</body>
+</html>
